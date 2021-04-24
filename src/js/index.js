@@ -1,5 +1,5 @@
 import "../style/index.scss";
-
+console.log(window.variables);
 /**
  *  EDIT ONLY INSIDE THIS RENDER FUNCTION
  *  This function is called every time the user changes types or changes any input
@@ -33,9 +33,14 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          
+          <h1>${variables.name == null ? "" : variables.name} ${
+    variables.lastname == null ? "" : variables.lastname
+  }</h1>
+            
+            
           <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h3>${variables.city}, ${variables.country}</h3>
           <ul class="position-right">
             <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
