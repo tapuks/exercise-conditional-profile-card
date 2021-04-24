@@ -40,7 +40,7 @@ function render(variables = {}) {
             
             
           <h2>Web Developer</h2>
-          <h3>${variables.city}, ${variables.country}</h3>
+          <h3>${variables.city}, ${variables.count}</h3>
           <ul class="position-right">
             <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
