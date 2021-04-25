@@ -40,9 +40,18 @@ function render(variables = {}) {
             
             
           <h2>Web Developer</h2>
-          <h3>${(variables.city==null) ? "" : variables.city}, ${(variables.country==null) ?"" : variables.country}</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
+          <h3>${variables.city == null ? "" : variables.city}, ${
+    variables.country == null ? "" : variables.country
+  }</h3>
+         
+          <ul class="${
+            variables.socialMediaPosition == ":position-right"
+              ? ":position-right"
+              : ":position-left"
+          }">
+            <li><a href="https://twitter.com/${
+              variables.twitter
+            }"><i class="fa fa-twitter"></i></a></li>
             <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
             <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/alesanchezr"><i class="fa fa-instagram"></i></a></li>
