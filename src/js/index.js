@@ -39,7 +39,7 @@ function render(variables = {}) {
   }</h1>
             
             
-          <h2>${variables.role==null ? "" : variables.role}</h2>
+          <h2>${variables.role == null ? "" : variables.role}</h2>
           <h3>${variables.city == null ? "" : variables.city}, ${
     variables.country == null ? "" : variables.country
   }</h3>
@@ -49,21 +49,19 @@ function render(variables = {}) {
               ? "position-right"
               : "position-left"
           }">
-            <li><a href="https://twitter.com/${ variables.twitter}"><i class="fa fa-twitter"></i></a><span>${variables.twitter}</span></li>
-            <li><a href="https://github.com/${
-              variables.github
-            }"><i class="fa fa-github"></i></a><span>${
-    variables.github
+
+          
+            <li><a href="https://twitter.com/${(variables.twitter==null)? "" : variables.twitter}
+            }"><i class="fa fa-twitter"></i></a><span>${(variables.twitter==null)? "" : variables.twitter}
   }</span></li>
-            <li><a href="https://linkedin.com/${
-              variables.linkedin
-            }"><i class="fa fa-linkedin"></i></a><span>${
-    variables.linkedin
+            <li><a href="https://github.com/${(variables.github==null)? "" : variables.github}
+            }"><i class="fa fa-github"></i></a><span>${(variables.github==null)? "" : variables.github}
   }</span></li>
-            <li><a href="https://instagram.com/${
-              variables.instagram
-            }"><i class="fa fa-instagram"></i></a><span>${
-    variables.instagram
+            <li><a href="https://linkedin.com/${(variables.linkedin==null)? "" : variables.linkedin}
+            }"><i class="fa fa-linkedin"></i></a><span>${(variables.linkedin==null)? "" : variables.linkedin}
+  }</span></li>
+            <li><a href="https://instagram.com/${(variables.instagram==null)? "" : variables.instagram}
+            }"><i class="fa fa-instagram"></i></a><span>${(variables.instagram==null)? "" : variables.instagram}
   }</span></li>
           </ul>
         </div>
