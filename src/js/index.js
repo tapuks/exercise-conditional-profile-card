@@ -51,17 +51,26 @@ function render(variables = {}) {
           }">
 
           
-            <li><a href="https://twitter.com/${(variables.twitter==null)? "" : variables.twitter}
-            }"><i class="fa fa-twitter"></i></a><span>${(variables.twitter==null)? "" : variables.twitter}
+            <li><a href="https://twitter.com/${
+              variables.twitter == null ? "" : variables.twitter
+            }"><i class="fa fa-twitter"></i></a><span>${
+    variables.twitter == null ? "" : variables.twitter
   }</span></li>
-            <li><a href="https://github.com/${(variables.github==null)? "" : variables.github}
-            }"><i class="fa fa-github"></i></a><span>${(variables.github==null)? "" : variables.github}
+            <li><a href="https://github.com/${
+              variables.github == null ? "" : variables.github
+            }
+            }"><i class="fa fa-github"></i></a><span>${
+              variables.github == null ? "" : variables.github
+            }</span></li>
+            <li><a href="https://linkedin.com/${
+              variables.linkedin == null ? "" : variables.linkedin
+            }"><i class="fa fa-linkedin"></i></a><span>${
+    variables.linkedin == null ? "" : variables.linkedin
   }</span></li>
-            <li><a href="https://linkedin.com/${(variables.linkedin==null)? "" : variables.linkedin}
-            }"><i class="fa fa-linkedin"></i></a><span>${(variables.linkedin==null)? "" : variables.linkedin}
-  }</span></li>
-            <li><a href="https://instagram.com/${(variables.instagram==null)? "" : variables.instagram}
-            }"><i class="fa fa-instagram"></i></a><span>${(variables.instagram==null)? "" : variables.instagram}
+            <li><a href="https://instagram.com/${
+              variables.instagram == null ? "" : variables.instagram
+            }"><i class="fa fa-instagram"></i></a><span>${
+    variables.instagram == null ? "" : variables.instagram
   }</span></li>
           </ul>
         </div>
@@ -83,7 +92,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
